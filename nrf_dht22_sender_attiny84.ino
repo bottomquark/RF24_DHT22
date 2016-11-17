@@ -18,6 +18,16 @@
 //  PWM        (D  4)  PA6  7|    |8   PA5  (D  5)        PWM
 //                           +----+
 
+//                              +-\/-+                              
+//nRF24L01  VCC, pin2 --- VCC  1|o   |14 GND --- nRF24L01  GND, pin1
+//DHT22 Data              PB0  2|    |13 AREF --- 3.3V
+//                        PB1  3|    |12 PA1
+//                        PB3  4|    |11 PA2 --- nRF24L01   CE, pin3
+//DHT22 VCC               PB2  5|    |10 PA3 --- nRF24L01  CSN, pin4
+//                        PA7  6|    |9  PA4 --- nRF24L01  SCK, pin5
+//nRF24L01 MOSI, pin7 --- PA6  7|    |8  PA5 --- nRF24L01 MISO, pin6
+//                              +----+
+
 //save some memory:
 #define DHT22_NO_FLOAT
 //#define ONEWIRE_CRC8_TABLE 0
